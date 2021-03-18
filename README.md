@@ -1,2 +1,4 @@
 # Programmation interactive client-serveur
-### Le dépôt du cours
+### La branche du cours 2
+
+Cette branche contient le code pour l'exercice Fetch CORS fait en cours
