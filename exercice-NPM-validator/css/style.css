@@ -1,0 +1,10 @@
+input {
+    padding: 3px 5px;
+    margin: 2px;
+    font-size: 18px;
+}
+
+#erreur {
+    font-weight: bold;
+    color: red;
+}
