@@ -7,4 +7,22 @@ document.forms.utilisateur.addEventListener('submit', event => {
     const nom = document.forms.utilisateur.nom.value;
     const age = document.forms.utilisateur.age.value;
     console.log(prenom,nom,age);
+
+    //  Enlever le message d'erreur
+    afficherErreur(null);
+
+    if( ! validator.isAlpha(prenom)){
+        afficherErreur('Le prénom est invalide');
+        return;
+    }
+
+    if( ! validator.isAlpha(nom)){
+    }
+
+    if( ! validator.isAlpha(age)){
+    }
+
+    function afficherErreur(message) {
+        document.querySelector('#erreur').innerHTML = message;
+    }
 })
