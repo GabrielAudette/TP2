@@ -13,3 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
+// Affichage (GET)
+Route::get('/messages', 'Messages@showAll');
+Route::get('/messages/{id}', 'Messages@show');
+
+// Création (POST)
+Route::post('/messages/new', 'Messages@create');
+
+// Autre routes
+Route::get('/users/active', 'Messages@activeUsers');
+Route::get('/users/active/{minutes}', 'Messages@activeUsers');
