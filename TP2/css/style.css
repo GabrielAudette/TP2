@@ -1,0 +1,18 @@
+.container {
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grosse_image {
+    background-color: #555;
+    height: 80vh;
+    width: 80vw;
+}
+.caroussel {
+    height: 20vh;
+    width: 100vw;
+    background-color: #666;
+}

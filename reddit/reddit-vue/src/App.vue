@@ -5,14 +5,15 @@
 </template>
 
 <script>
-import Post from './components/Post';
+import Post from "./components/Post";
+
 export default {
   name: "App",
   components: {
     Post,
   },
   data() {
-    return{
+    return {
       data: [],
     };
   },
@@ -21,19 +22,22 @@ export default {
       const url = `https://www.reddit.com/r/${sub}/new.json`;
 
       return fetch(url)
-      .then((res) => res.json())
-      .then((json) => {
-        return json.data.children.map((data) => {
-          return data.data;
+        .then((res) => res.json())
+        .then((json) => {
+          return json.data.children.map((data) => {
+            return data.data;
+          });
         });
-      });
     },
   },
   mounted() {
     this.getRedditData("wallpaper").then((data) => {
-      this.data = data;
       console.log(data);
+      this.data = data;
     });
   },
 };
 </script>
+
+<style>
+</style>
