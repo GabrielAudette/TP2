@@ -4,6 +4,7 @@
   </div>
 </template>
 
+
 <script>
 import Post from './components/Post'
 
