@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1 - Depart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="h1">Météomédia des pauvres</h1>
+    <div class="IC">
+        <form class="form" action="#">
+            <input class="forminput" type="text" placeholder="Ville">
+            <button class="btn" action="POST" type="submit">Recherchez</button>
+            <button class="rtn">Retour</button>
+        </form>
+    </div>
+        <div class="ville_infos">
+        <table class="tableau">
+            <thead>
+                <tr class="title_header">
+                    <th colspan="4">Météo du moment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="col1">
+                    <td class="ville">Ville: </td>
+                    <td class="temp">Temperature: </td>
+                    <td class="temp_res">Température ressentie: </td>
+                    <td class="desc">Description: </td>
+                </tr>
+                <tr class="col2">
+                    <td class="img">
+                    <img class="icone" src="">    
+                    </td>
+                    <td class="fdv">Force du vent: </td>
+                    <td class="ddv">Direction du vent: </td>
+                    <td class="fh">Fuseau Horaire: </td>
+                </tr>
+                <tr class="col3">
+                    <td class="pluie">Pluie: </td>
+                    <td class="neige">Neige: </td>
+                    <td class="lds">Lever du soleil: </td>
+                    <td class="cds">Coucher du soleil: </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

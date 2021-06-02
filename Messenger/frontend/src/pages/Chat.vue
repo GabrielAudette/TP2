@@ -1,63 +1,77 @@
 <!-- SECTION HTML -->
-
 <template>
-    <div id="content" class="chat">
-        <aside></aside>
-        <main>
-            <div id="message">
-                <Message :infos="message" v-for="message in messageList" :key="message.id"/>
-            </div>
-            <div id="textbox">
-                <form action="#" method="POST"
-                name="message" @submit.prevent="envoiMessage">
-                <input type="text" name="textbox" placeholder="Message" v-model="texteMessage"></form>
-                <div id="refresh">Rafraichir</div>
-            </div>
-        </main>
-    </div>
+  <div id="content" class="chat">
+    <aside></aside>
+    <main>
+      <div id="message">
+        <Message
+          :infos="message"
+          v-for="message in messageList"
+          :key="message.id"
+        />
+      </div>
+      <div id="textbox">
+        <form
+          action="#"
+          method="POST"
+          name="message"
+          @submit.prevent="envoiMessage"
+        >
+          <input
+            type="text"
+            name="textbox"
+            placeholder="Message"
+            v-model="texteMessage"
+          />
+        </form>
+        <div id="refresh">Rafraîchir</div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <!-- SECTION CODE -->
 <script>
-import Message from '../components/Message'
+import Message from "../components/Message";
+
 export default {
-    name: 'Chat',
-    components: {
-        Message,
+  name: "Chat",
+  components: {
+    Message,
+  },
+  data() {
+    return {
+      texteMessage: "",
+      messageList: [],
+    };
+  }, // FIN DATA
+  methods: {
+    envoiMessage() {
+      console.log(this.texteMessage);
     },
-    data() {
-        return {
-            texteMessage: "",
-            messageList: []
-        }
-    },
-    methods: {
-        envoiMessage() {
-            console.log(this.texteMessage);
-        },
-    }, // FIN DES MÉTHODES
+  }, // FIN DES MÉTHODES
     mounted() {
-        this.messageList = [
-            {
-            id: 1,
-            username: "usager1",
-            message: "Salut, ça va?",
-            created_at: "2021-03-27 15:31:15",
-            updated_at: "2021-03-27 15:31:15",
+    this.messageList = [
+        {
+        id: 1,
+        username: "usager1",
+        message: "Salut, ça va?",
+        created_at: "2021-03-27 15:31:15",
+        updated_at: "2021-03-27 15:31:15",
         },
         {
-            id: 2,
-            username: "usager2",
-            message: "Super, toi?",
-            created_at: "2021-03-27 15:32:25",
-            updated_at: "2021-03-27 15:32:25",
+        id: 2,
+        username: "usager2",
+        message: "Super, toi?",
+        created_at: "2021-03-27 15:32:25",
+        updated_at: "2021-03-27 15:32:25",
         },
         {
-            id: 3,
-            username: "usager1",
-            message: "J'ai besoin de t'emprunter de l'argent",
-            created_at: "2021-03-27 15:32:41",
-            updated_at: "2021-03-27 15:32:41",
+        id: 3,
+        username: "usager1",
+        message: "J'ai besoin de t'emprunter de l'argent",
+        created_at: "2021-03-27 15:32:41",
+        updated_at: "2021-03-27 15:32:41",
         },
         {
         id: 4,
@@ -66,8 +80,8 @@ export default {
         created_at: "2021-03-27 15:33:41",
         updated_at: "2021-03-27 15:33:41",
         },
-        ]
-    }
+        ];
+    },
 };
 </script>
 
@@ -96,31 +110,31 @@ export default {
 }
 
 .chat main {
-    display: flex;
-    padding: 0px 20px;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  padding: 0px 20px;
+  flex-direction: column;
+  flex: 1;
 }
 
 #textbox {
-    display: flex;
-    padding-bottom: 20px;
-    align-items: center;
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 #textbox form,
 #textbox input {
-    width: 100%;
-    flex: 1;
+  width: 100%;
+  flex: 1;
 }
 
 #textbox input {
-    border-radius: 8px;
-    border: none;
-    padding: 15px 15px;
-    background: #464646;
-    font-size: 16px;
-    color: #ccc;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 15px;
+  background: #464646;
+  font-size: 16px;
+  color: #ccc;
 }
 
 #textbox .refresh {
@@ -135,6 +149,6 @@ export default {
 }
 
 #textbox .refresh:hover {
-    background-color: #0c4769;
+  background-color: #0c4769;
 }
 </style>

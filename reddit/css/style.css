@@ -1,0 +1,13 @@
+.thumbnail {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.card {
+    min-height: 250px;
+    max-width: 250px;
+}
+
+.card-title {
+    font-size: 0.8rem;
+}
