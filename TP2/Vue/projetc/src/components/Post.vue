@@ -1,7 +1,5 @@
 <template>
-    <div className="123">
-        <img :src="post.url" alt="">
-    </div>
+    <img v-on:click="$emit('monEvent', post.title, post.author_fullname, post.url)" class="images" :src="post.url" alt="">
 </template>
 
 <script>
